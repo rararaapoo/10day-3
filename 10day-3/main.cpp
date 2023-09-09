@@ -12265,7 +12265,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = U;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12273,7 +12273,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12281,7 +12281,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}//
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12289,7 +12289,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12297,7 +12297,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -12306,7 +12306,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -12314,7 +12314,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -12322,7 +12322,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -12342,7 +12342,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 					if (map2[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map2[1][27] = BLOCK22;
+						map2[2][27] = BLOCK22;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12350,7 +12350,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map2[1][27] = BLOCK3;
+						map2[3][27] = BLOCK3;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12358,7 +12358,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map2[1][27] = BLOCK4;
+						map2[4][27] = BLOCK4;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12366,7 +12366,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map2[1][27] = BLOCK5;
+						map2[5][27] = BLOCK5;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12374,7 +12374,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map2[1][27] = BLOCK6;
+						map2[6][27] = BLOCK6;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12382,7 +12382,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map2[1][27] = BLOCK7;
+						map2[7][27] = BLOCK7;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12390,7 +12390,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map2[1][27] = BLOCK8;
+						map2[8][27] = BLOCK8;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = U;
 						playerPosY -= playerSpeed;
@@ -12400,7 +12400,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 				}
-				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+				// 99999999999999999999999999999999999999999999999999
 				// ここから直して
 				if (map2[playerMapY][playerMapX] == E)
 				{
@@ -12410,7 +12410,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = E; //ここをUに変える　したも同じ
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12418,7 +12418,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12426,7 +12426,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12434,7 +12434,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12442,7 +12442,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -12451,7 +12451,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -12459,7 +12459,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -12467,7 +12467,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -12486,7 +12486,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map2[1][27] = BLOCK22;
+						map2[2][27] = BLOCK22;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12494,7 +12494,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map2[1][27] = BLOCK3;
+						map2[3][27] = BLOCK3;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12502,7 +12502,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map2[1][27] = BLOCK4;
+						map2[4][27] = BLOCK4;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12510,7 +12510,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map2[1][27] = BLOCK5;
+						map2[5][27] = BLOCK5;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12518,7 +12518,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map2[1][27] = BLOCK6;
+						map2[6][27] = BLOCK6;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12526,7 +12526,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map2[1][27] = BLOCK7;
+						map2[7][27] = BLOCK7;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12534,7 +12534,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map2[1][27] = BLOCK8;
+						map2[8][27] = BLOCK8;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
@@ -12549,7 +12549,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = O;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12557,7 +12557,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12565,7 +12565,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12573,7 +12573,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12581,7 +12581,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -12590,7 +12590,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -12598,7 +12598,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -12606,7 +12606,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -12624,7 +12624,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map2[1][27] = BLOCK22;
+						map2[2][27] = BLOCK22;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12632,7 +12632,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map2[1][27] = BLOCK3;
+						map2[3][27] = BLOCK3;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12640,7 +12640,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map2[1][27] = BLOCK4;
+						map2[4][27] = BLOCK4;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12648,7 +12648,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map2[1][27] = BLOCK5;
+						map2[5][27] = BLOCK5;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12656,7 +12656,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map2[1][27] = BLOCK6;
+						map2[6][27] = BLOCK6;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12664,7 +12664,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map2[1][27] = BLOCK7;
+						map2[7][27] = BLOCK7;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12672,7 +12672,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map2[1][27] = BLOCK8;
+						map2[8][27] = BLOCK8;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = O;
 						playerPosY -= playerSpeed;
@@ -12687,7 +12687,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = KA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12695,7 +12695,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12703,7 +12703,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12711,7 +12711,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12719,7 +12719,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -12728,7 +12728,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -12736,7 +12736,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -12744,7 +12744,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -12763,7 +12763,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map2[1][27] = BLOCK22;
+						map2[2][27] = BLOCK22;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12771,7 +12771,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map2[1][27] = BLOCK3;
+						map2[3][27] = BLOCK3;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12779,7 +12779,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map2[1][27] = BLOCK4;
+						map2[4][27] = BLOCK4;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12787,7 +12787,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map2[1][27] = BLOCK5;
+						map2[5][27] = BLOCK5;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12795,7 +12795,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map2[1][27] = BLOCK6;
+						map2[6][27] = BLOCK6;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12803,7 +12803,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map2[1][27] = BLOCK7;
+						map2[7][27] = BLOCK7;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12811,7 +12811,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					}
 					if (map2[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map2[1][27] = BLOCK8;
+						map2[8][27] = BLOCK8;
 						map2[playerMapY][playerMapX] = YUKA;
 						map2[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
@@ -12826,7 +12826,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = KU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12834,7 +12834,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12842,7 +12842,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12850,7 +12850,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12858,7 +12858,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -12867,7 +12867,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -12875,7 +12875,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -12883,7 +12883,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -12966,7 +12966,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = SA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -12974,7 +12974,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -12982,7 +12982,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -12990,7 +12990,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -12998,7 +12998,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13007,7 +13007,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13015,7 +13015,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13023,7 +13023,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13105,7 +13105,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = SHI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13113,7 +13113,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13121,7 +13121,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13129,7 +13129,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13137,7 +13137,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13146,7 +13146,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13154,7 +13154,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13162,7 +13162,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13243,7 +13243,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = SU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13251,7 +13251,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13259,7 +13259,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13267,7 +13267,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13275,7 +13275,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13284,7 +13284,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13292,7 +13292,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13300,7 +13300,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13382,7 +13382,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = TO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13390,7 +13390,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13398,7 +13398,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13406,7 +13406,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13414,7 +13414,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13423,7 +13423,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13431,7 +13431,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13439,7 +13439,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13521,7 +13521,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = NE;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13529,7 +13529,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13537,7 +13537,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13545,7 +13545,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13553,7 +13553,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13562,7 +13562,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13570,7 +13570,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13578,7 +13578,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13660,7 +13660,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = FU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13668,7 +13668,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13676,7 +13676,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13684,7 +13684,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13692,7 +13692,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13701,7 +13701,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13709,7 +13709,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13717,7 +13717,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13800,7 +13800,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = MU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13808,7 +13808,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13816,7 +13816,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13824,7 +13824,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13832,7 +13832,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13841,7 +13841,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13849,7 +13849,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13857,7 +13857,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -13939,7 +13939,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = MO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -13947,7 +13947,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -13955,7 +13955,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -13963,7 +13963,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -13971,7 +13971,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -13980,7 +13980,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -13988,7 +13988,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -13996,7 +13996,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14078,7 +14078,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = YO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14086,7 +14086,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14094,7 +14094,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14102,7 +14102,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14110,7 +14110,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14119,7 +14119,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14127,7 +14127,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14135,7 +14135,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14217,7 +14217,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = NN;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14225,7 +14225,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14233,7 +14233,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14241,7 +14241,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14249,7 +14249,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14258,7 +14258,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14266,7 +14266,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14274,7 +14274,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14356,7 +14356,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = ZA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14364,7 +14364,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14372,7 +14372,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14380,7 +14380,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14388,7 +14388,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14397,7 +14397,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14405,7 +14405,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14413,7 +14413,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14495,7 +14495,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = ZI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14503,7 +14503,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14511,7 +14511,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14519,7 +14519,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14527,7 +14527,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14536,7 +14536,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14544,7 +14544,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14552,7 +14552,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14634,7 +14634,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = BU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14642,7 +14642,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14650,7 +14650,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14658,7 +14658,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14666,7 +14666,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14675,7 +14675,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14683,7 +14683,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14691,7 +14691,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14790,7 +14790,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					playerPosX -= playerSpeed;
 				}
 
-				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+				// 99999999999999999999999999999999999999999999999999
 				// ここから直して
 				if (map2[playerMapY][playerMapX] == U)
 				{
@@ -14800,7 +14800,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = U; //ここをUに変える　したも同じ
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14808,7 +14808,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14816,7 +14816,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14824,7 +14824,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14832,7 +14832,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14841,7 +14841,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14849,7 +14849,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14857,7 +14857,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -14940,7 +14940,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = E;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -14948,7 +14948,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -14956,7 +14956,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -14964,7 +14964,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -14972,7 +14972,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -14981,7 +14981,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -14989,7 +14989,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -14997,7 +14997,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15079,7 +15079,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = O;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15087,7 +15087,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15095,7 +15095,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15103,7 +15103,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15111,7 +15111,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15120,7 +15120,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15128,7 +15128,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15136,7 +15136,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15219,7 +15219,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = KA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15227,7 +15227,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15235,7 +15235,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15243,7 +15243,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15251,7 +15251,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15260,7 +15260,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15268,7 +15268,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15276,7 +15276,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15359,7 +15359,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = KU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15367,7 +15367,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15375,7 +15375,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15383,7 +15383,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15391,7 +15391,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15400,7 +15400,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15408,7 +15408,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15416,7 +15416,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15499,7 +15499,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = SA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15507,7 +15507,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15515,7 +15515,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15523,7 +15523,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15531,7 +15531,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15540,7 +15540,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15548,7 +15548,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15556,7 +15556,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15638,7 +15638,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = SHI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15646,7 +15646,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15654,7 +15654,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15662,7 +15662,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15670,7 +15670,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15679,7 +15679,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15687,7 +15687,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15695,7 +15695,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15777,7 +15777,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = SU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15785,7 +15785,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15793,7 +15793,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15801,7 +15801,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15809,7 +15809,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15818,7 +15818,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15826,7 +15826,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15834,7 +15834,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -15916,7 +15916,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = TO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -15924,7 +15924,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -15932,7 +15932,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -15940,7 +15940,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -15948,7 +15948,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -15957,7 +15957,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -15965,7 +15965,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -15973,7 +15973,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16055,7 +16055,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = NE;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16063,7 +16063,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16071,7 +16071,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16079,7 +16079,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16087,7 +16087,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16096,7 +16096,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16104,7 +16104,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16112,7 +16112,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16195,7 +16195,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = FU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16203,7 +16203,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16211,7 +16211,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16219,7 +16219,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16227,7 +16227,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16236,7 +16236,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16244,7 +16244,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16252,7 +16252,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16334,7 +16334,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = MU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16342,7 +16342,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16350,7 +16350,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16358,7 +16358,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16366,7 +16366,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16375,7 +16375,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16383,7 +16383,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16391,7 +16391,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16474,7 +16474,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = MO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16482,7 +16482,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16490,7 +16490,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16498,7 +16498,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16506,7 +16506,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16515,7 +16515,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16523,7 +16523,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16531,7 +16531,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16613,7 +16613,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = YO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16621,7 +16621,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16629,7 +16629,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16637,7 +16637,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16645,7 +16645,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16654,7 +16654,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16662,7 +16662,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16670,7 +16670,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16752,7 +16752,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = NN;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16760,7 +16760,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16768,7 +16768,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16776,7 +16776,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16784,7 +16784,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16793,7 +16793,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16801,7 +16801,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16809,7 +16809,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -16891,7 +16891,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = ZA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -16899,7 +16899,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -16907,7 +16907,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -16915,7 +16915,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -16923,7 +16923,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -16932,7 +16932,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -16940,7 +16940,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -16948,7 +16948,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17030,7 +17030,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = ZI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17038,7 +17038,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17046,7 +17046,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17054,7 +17054,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17062,7 +17062,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17071,7 +17071,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17079,7 +17079,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17087,7 +17087,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17169,7 +17169,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX - 1] = BU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17177,7 +17177,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17185,7 +17185,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17193,7 +17193,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17201,7 +17201,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17210,7 +17210,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17218,7 +17218,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17226,7 +17226,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17322,7 +17322,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 
-				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+				// 99999999999999999999999999999999999999999999999999
 				// ここから直して
 				if (map2[playerMapY][playerMapX] == U)
 				{
@@ -17332,7 +17332,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = U; //ここをUに変える　したも同じ
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17340,7 +17340,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17348,7 +17348,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17356,7 +17356,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17364,7 +17364,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17373,7 +17373,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17381,7 +17381,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17389,7 +17389,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17471,7 +17471,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = E;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17479,7 +17479,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17487,7 +17487,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17495,7 +17495,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17503,7 +17503,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17512,7 +17512,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17520,7 +17520,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17528,7 +17528,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17609,7 +17609,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = O;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17617,7 +17617,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17625,7 +17625,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17633,7 +17633,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17641,7 +17641,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17650,7 +17650,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17658,7 +17658,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17666,7 +17666,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17748,7 +17748,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = KA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17756,7 +17756,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17764,7 +17764,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17772,7 +17772,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17780,7 +17780,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17789,7 +17789,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17797,7 +17797,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17805,7 +17805,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -17887,7 +17887,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = KU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -17895,7 +17895,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -17903,7 +17903,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -17911,7 +17911,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -17919,7 +17919,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -17928,7 +17928,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -17936,7 +17936,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -17944,7 +17944,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18026,7 +18026,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = SA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18034,7 +18034,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18042,7 +18042,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18050,7 +18050,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18058,7 +18058,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18067,7 +18067,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18075,7 +18075,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18083,7 +18083,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18164,7 +18164,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = SHI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18172,7 +18172,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18180,7 +18180,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18188,7 +18188,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18196,7 +18196,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18205,7 +18205,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18213,7 +18213,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18221,7 +18221,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18303,7 +18303,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = SU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18311,7 +18311,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18319,7 +18319,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18327,7 +18327,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18335,7 +18335,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18344,7 +18344,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18352,7 +18352,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18360,7 +18360,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18442,7 +18442,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = TO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18450,7 +18450,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18458,7 +18458,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18466,7 +18466,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18474,7 +18474,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18483,7 +18483,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18491,7 +18491,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18499,7 +18499,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18581,7 +18581,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = NE;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18589,7 +18589,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18597,7 +18597,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18605,7 +18605,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18613,7 +18613,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18622,7 +18622,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18630,7 +18630,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18638,7 +18638,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18721,7 +18721,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = FU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18729,7 +18729,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18737,7 +18737,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18745,7 +18745,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18753,7 +18753,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18762,7 +18762,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18770,7 +18770,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18778,7 +18778,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18860,7 +18860,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = MU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -18868,7 +18868,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -18876,7 +18876,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -18884,7 +18884,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -18892,7 +18892,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -18901,7 +18901,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -18909,7 +18909,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -18917,7 +18917,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -18999,7 +18999,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = MO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19007,7 +19007,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19015,7 +19015,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19023,7 +19023,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19031,7 +19031,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19040,7 +19040,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19048,7 +19048,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19056,7 +19056,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19138,7 +19138,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = YO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19146,7 +19146,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19154,7 +19154,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19162,7 +19162,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19170,7 +19170,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19179,7 +19179,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19187,7 +19187,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19195,7 +19195,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19277,7 +19277,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = NN;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19285,7 +19285,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19293,7 +19293,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19301,7 +19301,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19309,7 +19309,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19318,7 +19318,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19326,7 +19326,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19334,7 +19334,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19416,7 +19416,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = ZA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19424,7 +19424,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19432,7 +19432,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19440,7 +19440,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19448,7 +19448,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19457,7 +19457,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19465,7 +19465,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19473,7 +19473,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19555,7 +19555,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = ZI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19563,7 +19563,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19571,7 +19571,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19579,7 +19579,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19587,7 +19587,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19596,7 +19596,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19604,7 +19604,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19612,7 +19612,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19694,7 +19694,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY][playerMapX + 1] = BU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19702,7 +19702,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19710,7 +19710,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19718,7 +19718,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19726,7 +19726,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19735,7 +19735,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19743,7 +19743,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19751,7 +19751,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19844,7 +19844,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 
-				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+				// 99999999999999999999999999999999999999999999999999
 				// ここから直して
 				if (map2[playerMapY][playerMapX] == U)
 				{
@@ -19854,7 +19854,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = U; //ここをUに変える　したも同じ
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -19862,7 +19862,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -19870,7 +19870,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -19878,7 +19878,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -19886,7 +19886,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -19895,7 +19895,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -19903,7 +19903,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -19911,7 +19911,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -19993,7 +19993,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = E;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20001,7 +20001,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20009,7 +20009,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20017,7 +20017,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20025,7 +20025,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20034,7 +20034,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20042,7 +20042,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20050,7 +20050,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20132,7 +20132,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = O;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20140,7 +20140,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20148,7 +20148,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20156,7 +20156,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20164,7 +20164,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20173,7 +20173,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20181,7 +20181,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20189,7 +20189,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20271,7 +20271,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = KA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20279,7 +20279,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20287,7 +20287,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20295,7 +20295,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20303,7 +20303,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20312,7 +20312,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20320,7 +20320,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20328,7 +20328,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20410,7 +20410,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = KU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20418,7 +20418,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20426,7 +20426,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20434,7 +20434,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20442,7 +20442,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20451,7 +20451,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20459,7 +20459,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20467,7 +20467,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20550,7 +20550,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = SA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20558,7 +20558,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20566,7 +20566,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20574,7 +20574,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20582,7 +20582,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20591,7 +20591,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20599,7 +20599,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20607,7 +20607,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20688,7 +20688,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = SHI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20696,7 +20696,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20704,7 +20704,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20712,7 +20712,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20720,7 +20720,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20729,7 +20729,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20737,7 +20737,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20745,7 +20745,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20826,7 +20826,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = SU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20834,7 +20834,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20842,7 +20842,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20850,7 +20850,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20858,7 +20858,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -20867,7 +20867,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -20875,7 +20875,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -20883,7 +20883,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -20966,7 +20966,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = TO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -20974,7 +20974,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -20982,7 +20982,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -20990,7 +20990,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -20998,7 +20998,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21007,7 +21007,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21015,7 +21015,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21023,7 +21023,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21105,7 +21105,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = NE;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21113,7 +21113,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21121,7 +21121,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21129,7 +21129,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21137,7 +21137,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21146,7 +21146,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21154,7 +21154,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21162,7 +21162,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21245,7 +21245,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = FU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21253,7 +21253,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21261,7 +21261,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21269,7 +21269,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21277,7 +21277,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21286,7 +21286,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21294,7 +21294,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21302,7 +21302,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21384,7 +21384,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = MU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21392,7 +21392,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21400,7 +21400,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21408,7 +21408,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21416,7 +21416,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21425,7 +21425,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21433,7 +21433,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21441,7 +21441,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21523,7 +21523,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = MO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21531,7 +21531,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21539,7 +21539,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21547,7 +21547,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21555,7 +21555,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21564,7 +21564,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21572,7 +21572,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21580,7 +21580,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21662,7 +21662,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = YO;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21670,7 +21670,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21678,7 +21678,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21686,7 +21686,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21694,7 +21694,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21703,7 +21703,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21711,7 +21711,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21719,7 +21719,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21801,7 +21801,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = NN;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21809,7 +21809,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21817,7 +21817,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21825,7 +21825,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21833,7 +21833,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21842,7 +21842,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21850,7 +21850,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21858,7 +21858,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -21940,7 +21940,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = ZA;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -21948,7 +21948,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -21956,7 +21956,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -21964,7 +21964,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -21972,7 +21972,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -21981,7 +21981,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -21989,7 +21989,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -21997,7 +21997,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -22079,7 +22079,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = ZI;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -22087,7 +22087,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -22095,7 +22095,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -22103,7 +22103,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -22111,7 +22111,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -22120,7 +22120,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -22128,7 +22128,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -22136,7 +22136,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -22218,7 +22218,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY + 1][playerMapX] = BU;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -22226,7 +22226,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[2][27] != BLOCK22 || map2[2][27] == BLOCK22)
 						{
-							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][11])
+							if (map2[2][27] == BLOCK22 && map2[playerMapY][playerMapX] == map2[4][9])
 							{
 								map2[playerMapY][playerMapX] = BLOCK22;
 								map2[2][27] = YUKA;
@@ -22234,7 +22234,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[3][27] != BLOCK3 || map2[3][27] == BLOCK3)
 						{
-							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][13])
+							if (map2[3][27] == BLOCK3 && map2[playerMapY][playerMapX] == map2[4][11])
 							{
 								map2[playerMapY][playerMapX] = BLOCK3;
 								map2[3][27] = YUKA;
@@ -22242,7 +22242,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[4][27] != BLOCK4 || map2[4][27] == BLOCK4)
 						{
-							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][15])
+							if (map2[4][27] == BLOCK4 && map2[playerMapY][playerMapX] == map2[4][13])
 							{
 								map2[playerMapY][playerMapX] = BLOCK4;
 								map2[4][27] = YUKA;
@@ -22250,7 +22250,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[5][27] != BLOCK5 || map2[5][27] == BLOCK5)
 						{
-							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][17])
+							if (map2[5][27] == BLOCK5 && map2[playerMapY][playerMapX] == map2[4][15])
 							{
 								map2[playerMapY][playerMapX] = BLOCK5;
 								map2[5][27] = YUKA;
@@ -22259,7 +22259,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						if (map2[6][27] != BLOCK6 || map2[6][27] == BLOCK6)
 						{
 
-							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][9])
+							if (map2[6][27] == BLOCK6 && map2[playerMapY][playerMapX] == /*6以降は後で*/map2[4][17])
 							{
 								map2[playerMapY][playerMapX] = BLOCK6;
 								map2[6][27] = YUKA;
@@ -22267,7 +22267,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[7][27] != BLOCK7 || map2[7][27] == BLOCK7)
 						{
-							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[7][27] == BLOCK7 && map2[playerMapY][playerMapX] == map2[4][19])
 							{
 								map2[playerMapY][playerMapX] = BLOCK7;
 								map2[7][27] = YUKA;
@@ -22275,7 +22275,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						}
 						if (map2[8][27] != BLOCK8 || map2[8][27] == BLOCK8)
 						{
-							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][9])
+							if (map2[8][27] == BLOCK8 && map2[playerMapY][playerMapX] == map2[4][21])
 							{
 								map2[playerMapY][playerMapX] = BLOCK8;
 								map2[8][27] = YUKA;
@@ -22370,7 +22370,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			// ステージ遷移　解答のシーンを作る予定
 			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				sceneNo = STAGE2;
+				sceneNo = STAGE3;
 			}
 
 			if (map[playerMapY][playerMapX] == GOAL)
