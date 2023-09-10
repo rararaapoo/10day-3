@@ -22402,39 +22402,26 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 			// 解答が合ってたらクリアフラグがtrueになる
-			if (map[blockMapY][blockMapX] == BLOCK1 && map[blockMapY][blockMapX] == I)
+			if (map2[4][7] == SA)
 			{
-				if (map[blockMapY][blockMapX] == BLOCK22 && map[blockMapY][blockMapX] == NU)
-				{
 					isClearFlag = true;
-				}
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			if (map2[playerMapY][playerMapX] == GOAL && isClearFlag == true /*&& keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			{
 				sceneNo = STAGE3;
 			}
 
-			if (map[playerMapY][playerMapX] == GOAL)
-			{
-				goalTimer--;
-				playerSpeed = 0;
-				if (goalTimer == 0)
-				{
-					sceneNo = GAMECLEAR;
-				}
-			}
-
-			if (map[playerMapY][playerMapX] == THORN)
-			{
-				deathTimer--;
-				playerSpeed = 0;
-				if (deathTimer == 0)
-				{
-					sceneNo = GAMEOVER;
-				}
-			}
+			//if (map2[playerMapY][playerMapX] == GOAL)
+			//{
+			//	goalTimer--;
+			//	playerSpeed = 0;
+			//	if (goalTimer == 0)
+			//	{
+			//		sceneNo = GAMECLEAR;
+			//	}
+			//}
 
 			break;
 
@@ -22469,159 +22456,159 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerTmpY = playerPosY - playerSpeed;
 				playerMapY = playerTmpY / KBlockSize;
 				//何もないから実際に進ませる
-				if (map[playerMapY][playerMapX] == YUKA)
+				if (map3[playerMapY][playerMapX] == YUKA)
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == BLOCK1)
+				if (map3[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == GOAL)
+				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == THORN)
+				if (map3[playerMapY][playerMapX] == THORN)
 				{
 					playerPosY -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX] == I)
+				if (map3[playerMapY][playerMapX] == A)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = I;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = A;
 						playerPosY -= playerSpeed;
 
 					}
@@ -22632,2780 +22619,2800 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 				// ここから直して
-				if (map[playerMapY][playerMapX] == U)
+				if (map3[playerMapY][playerMapX] == KE)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U; //ここをUに変える　したも同じ
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE; //ここをKEに変える　したも同じ
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = U;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KE;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == E)
+				if (map3[playerMapY][playerMapX] == E)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = E;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = E;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KA)
+				if (map3[playerMapY][playerMapX] == KA)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KA;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KU)
+				if (map3[playerMapY][playerMapX] == KU)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = KU;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KO)
+				if (map3[playerMapY][playerMapX] == NO)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = KO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NO;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SA)
+				if (map3[playerMapY][playerMapX] == GA)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GA;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SU)
+				if (map3[playerMapY][playerMapX] == SU)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SU;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SO)
+				if (map3[playerMapY][playerMapX] == SO)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = SO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = SO;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == TA)
+				if (map3[playerMapY][playerMapX] == NI)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = TA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NI;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == CHI)
+				if (map3[playerMapY][playerMapX] == CHI)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = CHI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = CHI;
 						playerPosY -= playerSpeed;
 
 					}
 				}
 
-				if (map[playerMapY][playerMapX] == NU)
+				if (map3[playerMapY][playerMapX] == NU)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NU;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NE)
+				if (map3[playerMapY][playerMapX] == NE)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NE;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = NE;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == MA)
+				if (map3[playerMapY][playerMapX] == RA)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = MA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RA;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == YA)
+				if (map3[playerMapY][playerMapX] == HO)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = YA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = HO;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RI)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RU)
+				if (map3[playerMapY][playerMapX] == RU)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = RU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = RU;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == WA)
+				if (map3[playerMapY][playerMapX] == YU)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = WA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = YU;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NN)
+				if (map3[playerMapY][playerMapX] == DO)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = NN;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = DO;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == GI)
+				if (map3[playerMapY][playerMapX] == GO)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
 
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = GI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = GO;
 						playerPosY -= playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == ZO)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY - 1][playerMapX] == YUKA)
+					if (map3[playerMapY - 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY -= playerSpeed;
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK22)
+
+					if (map3[playerMapY - 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
-					if (map[playerMapY - 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY - 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY - 1][playerMapX] = ZO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY - 1][playerMapX] = ZE;
 						playerPosY -= playerSpeed;
 
 					}
@@ -25417,92 +25424,92 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerTmpX = playerPosX - playerSpeed;
 				playerMapX = playerTmpX / KBlockSize;
 				//何もないから実際に進ませる
-				if (map[playerMapY][playerMapX] == YUKA)
+				if (map3[playerMapY][playerMapX] == YUKA)
 				{
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == BLOCK1)
+				if (map3[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == GOAL)
+				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == THORN)
+				if (map3[playerMapY][playerMapX] == THORN)
 				{
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX] == I)
+				if (map3[playerMapY][playerMapX] == A)
 				{
-					if (map[playerMapY][playerMapX - 1] == YUKA)
+					if (map3[playerMapY][playerMapX - 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX - 1] = I;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX - 1] = A;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 
@@ -25515,2786 +25522,2786 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 			// ここから直して
-			if (map[playerMapY][playerMapX] == U)
+			if (map3[playerMapY][playerMapX] == KE)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U; //ここをUに変える　したも同じ
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE; //ここをKEに変える　したも同じ
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = U;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KE;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == E)
+			if (map3[playerMapY][playerMapX] == E)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = E;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = E;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == KA)
+			if (map3[playerMapY][playerMapX] == KA)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KA;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == KU)
+			if (map3[playerMapY][playerMapX] == KU)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KU;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = KU;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == KO)
+			if (map3[playerMapY][playerMapX] == NO)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = KO;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NO;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == SA)
+			if (map3[playerMapY][playerMapX] == GA)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GA;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == SU)
+			if (map3[playerMapY][playerMapX] == SU)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SU;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SU;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == SO)
+			if (map3[playerMapY][playerMapX] == SO)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = SO;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = SO;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == TA)
+			if (map3[playerMapY][playerMapX] == NI)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = TA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NI;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == CHI)
+			if (map3[playerMapY][playerMapX] == CHI)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = CHI;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = CHI;
 					playerPosX -= playerSpeed;
 
 				}
 			}
 
-			if (map[playerMapY][playerMapX] == NU)
+			if (map3[playerMapY][playerMapX] == NU)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NU;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NU;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == NE)
+			if (map3[playerMapY][playerMapX] == NE)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NE;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = NE;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == MA)
+			if (map3[playerMapY][playerMapX] == RA)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = MA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RA;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == YA)
+			if (map3[playerMapY][playerMapX] == HO)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = YA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = HO;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == RI)
+			if (map3[playerMapY][playerMapX] == ZE)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RI;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == RU)
+			if (map3[playerMapY][playerMapX] == RU)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = RU;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = RU;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == WA)
+			if (map3[playerMapY][playerMapX] == YU)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = WA;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = YU;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == NN)
+			if (map3[playerMapY][playerMapX] == DO)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = NN;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = DO;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == GI)
+			if (map3[playerMapY][playerMapX] == GO)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = GI;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = GO;
 					playerPosX -= playerSpeed;
 
 				}
 			}
-			if (map[playerMapY][playerMapX] == ZO)
+			if (map3[playerMapY][playerMapX] == ZE)
 			{
-				if (map[playerMapY][playerMapX - 1] == YUKA)
+				if (map3[playerMapY][playerMapX - 1] == YUKA)
 				{
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
-					if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
+					if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 					{
-						if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK1;
-							map[1][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK1;
+							map3[1][27] = YUKA;
 						}
 					}
-					if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+					if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 					{
-						if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+						if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 						{
-							map[playerMapY][playerMapX] = BLOCK22;
-							map[2][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK22;
+							map3[2][27] = YUKA;
 						}
 					}
-					if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+					if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 					{
-						if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+						if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 						{
-							map[playerMapY][playerMapX] = BLOCK3;
-							map[3][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK3;
+							map3[3][27] = YUKA;
 						}
 					}
-					if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+					if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 					{
-						if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+						if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 						{
-							map[playerMapY][playerMapX] = BLOCK4;
-							map[4][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK4;
+							map3[4][27] = YUKA;
 						}
 					}
-					if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+					if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 					{
-						if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+						if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 						{
-							map[playerMapY][playerMapX] = BLOCK5;
-							map[5][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK5;
+							map3[5][27] = YUKA;
 						}
 					}
-					if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+					if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 					{
 
-						if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+						if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK6;
-							map[6][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK6;
+							map3[6][27] = YUKA;
 						}
 					}
-					if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+					if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 					{
-						if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK7;
-							map[7][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK7;
+							map3[7][27] = YUKA;
 						}
 					}
-					if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+					if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 					{
-						if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+						if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 						{
-							map[playerMapY][playerMapX] = BLOCK8;
-							map[8][27] = YUKA;
+							map3[playerMapY][playerMapX] = BLOCK8;
+							map3[8][27] = YUKA;
 						}
 					}
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK1)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK1)
 				{
-					map[1][27] = BLOCK1;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[1][27] = BLOCK1;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK22)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK22)
 				{
-					map[1][27] = BLOCK22;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[2][27] = BLOCK22;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK3)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK3)
 				{
-					map[1][27] = BLOCK3;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[3][27] = BLOCK3;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK4)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK4)
 				{
-					map[1][27] = BLOCK4;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[4][27] = BLOCK4;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK5)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK5)
 				{
-					map[1][27] = BLOCK5;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[5][27] = BLOCK5;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK6)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK6)
 				{
-					map[1][27] = BLOCK6;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[6][27] = BLOCK6;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK7)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK7)
 				{
-					map[1][27] = BLOCK7;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[7][27] = BLOCK7;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
-				if (map[playerMapY][playerMapX - 1] == BLOCK8)
+				if (map3[playerMapY][playerMapX - 1] == BLOCK8)
 				{
-					map[1][27] = BLOCK8;
-					map[playerMapY][playerMapX] = YUKA;
-					map[playerMapY][playerMapX - 1] = ZO;
+					map3[8][27] = BLOCK8;
+					map3[playerMapY][playerMapX] = YUKA;
+					map3[playerMapY][playerMapX - 1] = ZE;
 					playerPosX -= playerSpeed;
 
 				}
@@ -28306,154 +28313,154 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerTmpX = playerPosX + playerSpeed;
 				playerMapX = playerTmpX / KBlockSize;
 				//何もないから実際に進ませる
-				if (map[playerMapY][playerMapX] == YUKA)
+				if (map3[playerMapY][playerMapX] == YUKA)
 				{
 					playerPosX += playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == GOAL)
+				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosX += playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == THORN)
+				if (map3[playerMapY][playerMapX] == THORN)
 				{
 					playerPosX += playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX] == I)
+				if (map3[playerMapY][playerMapX] == A)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = I;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
@@ -28464,2780 +28471,2776 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 				// ここから直して
-				if (map[playerMapY][playerMapX] == U)
+				if (map3[playerMapY][playerMapX] == KE)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U; //ここをUに変える　したも同じ
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE; //ここをKEに変える　したも同じ
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = U;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KE;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == E)
+				if (map3[playerMapY][playerMapX] == E)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = E;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = E;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KA)
+				if (map3[playerMapY][playerMapX] == KA)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KA;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KU)
+				if (map3[playerMapY][playerMapX] == KU)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = KU;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KO)
+				if (map3[playerMapY][playerMapX] == NO)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = KO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NO;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SA)
+				if (map3[playerMapY][playerMapX] == GA)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GA;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SU)
+				if (map3[playerMapY][playerMapX] == SU)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SU;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SO)
+				if (map3[playerMapY][playerMapX] == SO)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = SO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = SO;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == TA)
+				if (map3[playerMapY][playerMapX] == NI)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = TA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NI;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == CHI)
+				if (map3[playerMapY][playerMapX] == CHI)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = CHI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = CHI;
 						playerPosX += playerSpeed;
 
 					}
 				}
 
-				if (map[playerMapY][playerMapX] == NU)
+				if (map3[playerMapY][playerMapX] == NU)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NU;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NE)
+				if (map3[playerMapY][playerMapX] == NE)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NE;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = NE;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == MA)
+				if (map3[playerMapY][playerMapX] == RA)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = MA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RA;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == YA)
+				if (map3[playerMapY][playerMapX] == HO)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = YA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = HO;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RI)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RU)
+				if (map3[playerMapY][playerMapX] == RU)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = RU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = RU;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == WA)
+				if (map3[playerMapY][playerMapX] == YU)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = YU;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = WA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = A;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NN)
+				if (map3[playerMapY][playerMapX] == DO)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = NN;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = DO;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == GI)
+				if (map3[playerMapY][playerMapX] == GO)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
 
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = GI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = GO;
 						playerPosX += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == ZO)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY][playerMapX + 1] == YUKA)
+					if (map3[playerMapY][playerMapX + 1] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosX += playerSpeed;
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK1)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK22)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK3)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK4)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK5)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK6)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK7)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
-						playerPosX += playerSpeed;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
+						playerPosX = playerSpeed;
 
 					}
-					if (map[playerMapY][playerMapX + 1] == BLOCK8)
+					if (map3[playerMapY][playerMapX + 1] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY][playerMapX + 1] = ZO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY][playerMapX + 1] = ZE;
 						playerPosX += playerSpeed;
 
 					}
@@ -31249,150 +31252,150 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerTmpY = playerPosY + playerSpeed;
 				playerMapY = playerTmpY / KBlockSize;
 				//何もないから実際に進ませる
-				if (map[playerMapY][playerMapX] == YUKA)
+				if (map3[playerMapY][playerMapX] == YUKA)
 				{
 					playerPosY += playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == GOAL)
+				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosY += playerSpeed;
 				}
 
-				if (map[playerMapY][playerMapX] == I)
+				if (map3[playerMapY][playerMapX] == A)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = I;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = A;
 						playerPosY += playerSpeed;
 
 					}
@@ -31403,2780 +31406,2780 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				// 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 				// ここから直して
-				if (map[playerMapY][playerMapX] == U)
+				if (map3[playerMapY][playerMapX] == KE)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U; //ここをUに変える　したも同じ
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE; //ここをKEに変える　したも同じ
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = U;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KE;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == E)
+				if (map3[playerMapY][playerMapX] == E)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = E;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = E;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KA)
+				if (map3[playerMapY][playerMapX] == KA)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KA;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KU)
+				if (map3[playerMapY][playerMapX] == KU)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = KU;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == KO)
+				if (map3[playerMapY][playerMapX] == NO)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = KO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NO;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SA)
+				if (map3[playerMapY][playerMapX] == GA)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GA;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SU)
+				if (map3[playerMapY][playerMapX] == SU)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SU;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == SO)
+				if (map3[playerMapY][playerMapX] == SO)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = SO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = SO;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == TA)
+				if (map3[playerMapY][playerMapX] == NI)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = TA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NI;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == CHI)
+				if (map3[playerMapY][playerMapX] == CHI)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = CHI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = CHI;
 						playerPosY += playerSpeed;
 
 					}
 				}
 
-				if (map[playerMapY][playerMapX] == NU)
+				if (map3[playerMapY][playerMapX] == NU)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NU;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NE)
+				if (map3[playerMapY][playerMapX] == NE)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NE;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = NE;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == MA)
+				if (map3[playerMapY][playerMapX] == RA)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = MA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RA;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == YA)
+				if (map3[playerMapY][playerMapX] == HO)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = YA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = HO;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RI)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == RU)
+				if (map3[playerMapY][playerMapX] == RU)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = RU;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = RU;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == WA)
+				if (map3[playerMapY][playerMapX] == YU)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = WA;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = YU;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == NN)
+				if (map3[playerMapY][playerMapX] == DO)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = NN;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = DO;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == GI)
+				if (map3[playerMapY][playerMapX] == GO)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
 
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = GI;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = GO;
 						playerPosY += playerSpeed;
 
 					}
 				}
-				if (map[playerMapY][playerMapX] == ZO)
+				if (map3[playerMapY][playerMapX] == ZE)
 				{
-					if (map[playerMapY + 1][playerMapX] == YUKA)
+					if (map3[playerMapY + 1][playerMapX] == YUKA)
 					{
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
-						if (map[1][27] != BLOCK1 || map[1][27] == BLOCK1)
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
+						if (map3[1][27] != BLOCK1 || map3[1][27] == BLOCK1)
 						{
-							if (map[1][27] == BLOCK1 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[1][27] == BLOCK1 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK1;
-								map[1][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK1;
+								map3[1][27] = YUKA;
 							}
 						}
-						if (map[2][27] != BLOCK22 || map[2][27] == BLOCK22)
+						if (map3[2][27] != BLOCK22 || map3[2][27] == BLOCK22)
 						{
-							if (map[2][27] == BLOCK22 && map[playerMapY][playerMapX] == map[4][11])
+							if (map3[2][27] == BLOCK22 && map3[playerMapY][playerMapX] == map3[4][11])
 							{
-								map[playerMapY][playerMapX] = BLOCK22;
-								map[2][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK22;
+								map3[2][27] = YUKA;
 							}
 						}
-						if (map[3][27] != BLOCK3 || map[3][27] == BLOCK3)
+						if (map3[3][27] != BLOCK3 || map3[3][27] == BLOCK3)
 						{
-							if (map[3][27] == BLOCK3 && map[playerMapY][playerMapX] == map[4][13])
+							if (map3[3][27] == BLOCK3 && map3[playerMapY][playerMapX] == map3[4][13])
 							{
-								map[playerMapY][playerMapX] = BLOCK3;
-								map[3][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK3;
+								map3[3][27] = YUKA;
 							}
 						}
-						if (map[4][27] != BLOCK4 || map[4][27] == BLOCK4)
+						if (map3[4][27] != BLOCK4 || map3[4][27] == BLOCK4)
 						{
-							if (map[4][27] == BLOCK4 && map[playerMapY][playerMapX] == map[4][15])
+							if (map3[4][27] == BLOCK4 && map3[playerMapY][playerMapX] == map3[4][15])
 							{
-								map[playerMapY][playerMapX] = BLOCK4;
-								map[4][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK4;
+								map3[4][27] = YUKA;
 							}
 						}
-						if (map[5][27] != BLOCK5 || map[5][27] == BLOCK5)
+						if (map3[5][27] != BLOCK5 || map3[5][27] == BLOCK5)
 						{
-							if (map[5][27] == BLOCK5 && map[playerMapY][playerMapX] == map[4][17])
+							if (map3[5][27] == BLOCK5 && map3[playerMapY][playerMapX] == map3[4][17])
 							{
-								map[playerMapY][playerMapX] = BLOCK5;
-								map[5][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK5;
+								map3[5][27] = YUKA;
 							}
 						}
-						if (map[6][27] != BLOCK6 || map[6][27] == BLOCK6)
+						if (map3[6][27] != BLOCK6 || map3[6][27] == BLOCK6)
 						{
 
-							if (map[6][27] == BLOCK6 && map[playerMapY][playerMapX] == /*6以降は後で*/map[4][9])
+							if (map3[6][27] == BLOCK6 && map3[playerMapY][playerMapX] == /*6以降は後で*/map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK6;
-								map[6][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK6;
+								map3[6][27] = YUKA;
 							}
 						}
-						if (map[7][27] != BLOCK7 || map[7][27] == BLOCK7)
+						if (map3[7][27] != BLOCK7 || map3[7][27] == BLOCK7)
 						{
-							if (map[7][27] == BLOCK7 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[7][27] == BLOCK7 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK7;
-								map[7][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK7;
+								map3[7][27] = YUKA;
 							}
 						}
-						if (map[8][27] != BLOCK8 || map[8][27] == BLOCK8)
+						if (map3[8][27] != BLOCK8 || map3[8][27] == BLOCK8)
 						{
-							if (map[8][27] == BLOCK8 && map[playerMapY][playerMapX] == map[4][9])
+							if (map3[8][27] == BLOCK8 && map3[playerMapY][playerMapX] == map3[4][9])
 							{
-								map[playerMapY][playerMapX] = BLOCK8;
-								map[8][27] = YUKA;
+								map3[playerMapY][playerMapX] = BLOCK8;
+								map3[8][27] = YUKA;
 							}
 						}
 						playerPosY += playerSpeed;
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK1)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK1)
 					{
-						map[1][27] = BLOCK1;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[1][27] = BLOCK1;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK22)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK22)
 					{
-						map[1][27] = BLOCK22;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[2][27] = BLOCK22;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK3)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK3)
 					{
-						map[1][27] = BLOCK3;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[3][27] = BLOCK3;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK4)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK4)
 					{
-						map[1][27] = BLOCK4;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[4][27] = BLOCK4;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK5)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK5)
 					{
-						map[1][27] = BLOCK5;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[5][27] = BLOCK5;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK6)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK6)
 					{
-						map[1][27] = BLOCK6;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[6][27] = BLOCK6;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK7)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK7)
 					{
-						map[1][27] = BLOCK7;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[7][27] = BLOCK7;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
-					if (map[playerMapY + 1][playerMapX] == BLOCK8)
+					if (map3[playerMapY + 1][playerMapX] == BLOCK8)
 					{
-						map[1][27] = BLOCK8;
-						map[playerMapY][playerMapX] = YUKA;
-						map[playerMapY + 1][playerMapX] = ZO;
+						map3[8][27] = BLOCK8;
+						map3[playerMapY][playerMapX] = YUKA;
+						map3[playerMapY + 1][playerMapX] = ZE;
 						playerPosY += playerSpeed;
 
 					}
@@ -34987,6 +34990,319 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			{
 				for (int x = 0; x < mapCountX3; x++)
 				{
+					if (map3[y][x] == A)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, a, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == I)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, i, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == U)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, u, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == E)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, e, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == O)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, o, 1, 1, 0, WHITE);
+					}
+
+					//か
+					if (map3[y][x] == KA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ka, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == KI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ki, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == KU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ku, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == KE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ke, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == KO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ko, 1, 1, 0, WHITE);
+					}
+
+					//さ
+					if (map3[y][x] == SA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, sa, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == SHI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, shi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == SU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, su, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == SE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, se, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == SO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, so, 1, 1, 0, WHITE);
+					}
+
+					//た
+					if (map3[y][x] == TA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ta, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == CHI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, chi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == TSU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, tsu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == TE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, te, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == TO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, to, 1, 1, 0, WHITE);
+					}
+
+					//な
+					if (map3[y][x] == NA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, na, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == NI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ni, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == NU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, nu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == NE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ne, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == NO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, no, 1, 1, 0, WHITE);
+					}
+
+					//は
+					if (map3[y][x] == HA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ha, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == HI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, hi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == FU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, hu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == HE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, he, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == HO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ho, 1, 1, 0, WHITE);
+					}
+
+					//ま
+					if (map3[y][x] == MA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ma, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == MI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, mi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == MU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, mu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == ME)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, me, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == MO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, mo, 1, 1, 0, WHITE);
+					}
+
+					//や
+					if (map3[y][x] == YA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ya, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == YU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, yu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == YO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, yo, 1, 1, 0, WHITE);
+					}
+
+					//ら
+					if (map3[y][x] == RA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ra, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == RI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ri, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == RU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ru, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == RE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, re, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == RO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ro, 1, 1, 0, WHITE);
+					}
+
+					//わ
+					if (map3[y][x] == WA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, wa, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == WO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, wo, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == NN)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, nn, 1, 1, 0, WHITE);
+					}
+
+					//が
+					if (map3[y][x] == GA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ga, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == GI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, gi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == GU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, gu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == GE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ge, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == GO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, go, 1, 1, 0, WHITE);
+					}
+
+					//ざ
+					if (map3[y][x] == ZA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, za, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == ZI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, zi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == ZU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, zu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == ZE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ze, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == ZO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, zo, 1, 1, 0, WHITE);
+					}
+
+					//だ
+					if (map3[y][x] == DA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, da, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == DI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, di, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == DU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, du, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == DE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, de, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == DO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, doo, 1, 1, 0, WHITE);
+					}
+
+					//ば
+					if (map3[y][x] == BA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, ba, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == BI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, bi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == BU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, bu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == BE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, be, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == BO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, bo, 1, 1, 0, WHITE);
+					}
+
+					//ぱ
+					if (map3[y][x] == PA)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, pa, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == PI)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, pi, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == PU)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, pu, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == PE)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, pe, 1, 1, 0, WHITE);
+					}
+					if (map3[y][x] == PO)
+					{
+						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, po, 1, 1, 0, WHITE);
+					}
+
 					if (map3[y][x] == YUKA)
 					{
 						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, BLUE, kFillModeSolid);
@@ -34995,8 +35311,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					{
 						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, block, 1, 1, 0, WHITE);
 					}
-
-					/*if (map3[y][x] == BLOCK22)
+					/*if (map[y][x] == BLOCK22)
 					{
 						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, RED, kFillModeSolid);
 					}*/
@@ -35004,6 +35319,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					{
 						Novice::DrawSprite(x * KBlockSize, y * KBlockSize, goal, 1, 1, 0, WHITE);
 					}
+
 				}
 			}
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
