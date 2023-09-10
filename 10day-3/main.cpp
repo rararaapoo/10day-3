@@ -34209,7 +34209,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				sceneNo = STAGE2;
 			}
 
-			if (map[playerMapY][playerMapX] == GOAL)
+			/*if (map[playerMapY][playerMapX] == GOAL)
 			{
 				goalTimer--;
 				playerSpeed = 0;
@@ -34227,7 +34227,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					sceneNo = GAMEOVER;
 				}
-			}
+			}*/
 
 			break;
 
