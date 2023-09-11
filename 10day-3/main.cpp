@@ -427,6 +427,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			isClearFlag = false;
 			stageClearFlag = false;
 			isLife = 3;
+
+			hintoFlag = false;
+
+			lifeImageFlag1 = true;
+			lifeImageFlag2 = true;
+			lifeImageFlag3 = true;
+
 			for (int y = 0; y < mapCountY; y++)
 			{
 				for (int x = 0; x < mapCountX; x++)
@@ -12255,6 +12262,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				lifeImageFlag1 = false;
 				lifeImageFlag2 = false;
 				lifeImageFlag3 = true;
+				hintoFlag = true;
+			}
+
+			if (keys[DIK_B] && preKeys[DIK_B] == 0)
+			{
+				hintoFlag = false;
 			}
 
 			if (isLife <= 0)
@@ -23080,6 +23093,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				lifeImageFlag1 = false;
 				lifeImageFlag2 = false;
 				lifeImageFlag3 = true;
+				hintoFlag = true;
+			}
+
+			if (keys[DIK_B] && preKeys[DIK_B] == 0)
+			{
+				hintoFlag = false;
 			}
 
 			if (isLife <= 0)
@@ -34909,6 +34928,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				lifeImageFlag1 = false;
 				lifeImageFlag2 = false;
 				lifeImageFlag3 = true;
+				hintoFlag = true;
+			}
+
+			if (keys[DIK_B] && preKeys[DIK_B] == 0)
+			{
+				hintoFlag = false;
 			}
 
 			if (isLife <= 0)
@@ -34948,6 +34973,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				lifeImageFlag1 = true;
 				lifeImageFlag2 = true;
 				lifeImageFlag3 = true;
+				hintoFlag = false;
 
 				sceneNo = STAGE2;
 			}
@@ -34968,6 +34994,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				lifeImageFlag1 = true;
 				lifeImageFlag2 = true;
 				lifeImageFlag3 = true;
+				hintoFlag = false;
 
 				sceneNo = STAGE3;
 			}
