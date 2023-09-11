@@ -362,8 +362,26 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int title = Novice::LoadTexture("./images/TITLE.png");
 	int MANUAL = Novice::LoadTexture("./images/MANUALS.png");
 
+	// Audio
+	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
+	//int gameOverAudio = Novice::LoadAudio("./images/gameOver_SE.mp3");*/
+	int backGroundAudio = Novice::LoadAudio("./images/backGround_BGM.mp3");
+	/*int failureAudio = Novice::LoadAudio("./images/failureSE.mp3");
+	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");*/
+
 	bool isClearFlag = false;
+	//bool isGameOverAudioFlag = false;
+	bool isGameClearAudioFloag = false;
 	//int isLife = 3;
+
+	// backGround BGM Play
+	Novice::PlayAudio(backGroundAudio, 1, 1);
+
+	// isGameClearAudioFloagがtrueになれば再生する
+	if (isGameClearAudioFloag == true)
+	{
+		Novice::PlayAudio(gameClearAudio, 1, 1);
+	}
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -377,6 +395,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
+
 
 		switch (sceneNo)
 		{
@@ -12173,27 +12192,30 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 			// 解答が合ってたらクリアフラグがtrueになる
-			if (map[4][9] == I)
+			if (map[4][9] == I && map[4][11] == NU)
 			{
-				if (map[4][11] == NU)
-				{
-					isClearFlag = true;
-				}
+				isClearFlag = true;
+
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			//if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true/* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
+			//if (map[playerMapY][playerMapX] == GOAL /*&& isClearFlag == true*//* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			//{
+			//	
 			//	sceneNo = GAMECLEAR;
+	
 			//}
 
 			if (map[playerMapY][playerMapX] == GOAL)
 			{
 				goalTimer--;
 				playerSpeed = 0;
+				
 				if (goalTimer == 0)
 				{
+					
 					sceneNo = GAMECLEAR;
+
 				}
 			}
 
@@ -12215,6 +12237,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			blockMapX = blockPosX / KBlockSize;
 			blockMapY = blockPosY / KBlockSize;
+
 
 			//リスタート
 			if (keys[DIK_R] && preKeys[DIK_R] == 0)
@@ -12265,7 +12288,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 						map2[playerMapY - 1][playerMapX] = U;
 						if (map2[1][27] != BLOCK1 || map2[1][27] == BLOCK1)
 						{
-							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map[4][7])
+							if (map2[1][27] == BLOCK1 && map2[playerMapY][playerMapX] == map2[4][7])
 							{
 								map2[playerMapY][playerMapX] = BLOCK1;
 								map2[1][27] = YUKA;
@@ -22966,15 +22989,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 			// 解答が合ってたらクリアフラグがtrueになる
-			if (map2[4][7] == SA)
+			if (map2[4][7] == SA && map2[4][9] == GI && map2[4][11] == YO && map2[4][13] == U)
 			{
-					isClearFlag = true;
+				isClearFlag = true;
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			if (map2[playerMapY][playerMapX] == GOAL && isClearFlag == true /*&& keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
+			if (map2[playerMapY][playerMapX] == GOAL /*&& isClearFlag == true*/ /*&& keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			{
-				sceneNo = STAGE3;
+				sceneNo = GAMECLEAR2;
 			}
 
 			//if (map2[playerMapY][playerMapX] == GOAL)
@@ -34759,18 +34782,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 
 			// 解答が合ってたらクリアフラグがtrueになる
-			if (map[blockMapY][blockMapX] == BLOCK1 && map[blockMapY][blockMapX] == I)
+			if (map3[4][9] == TSU)
 			{
-				if (map[blockMapY][blockMapX] == BLOCK22 && map[blockMapY][blockMapX] == NU)
-				{
-					isClearFlag = true;
-				}
+				isClearFlag = true;
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			if (map3[playerMapY][playerMapX] == GOAL /* && isClearFlag == true *//* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			{
-				sceneNo = STAGE2;
+				sceneNo = GAMECLEAR3;
 			}
 
 			/*if (map[playerMapY][playerMapX] == GOAL)
@@ -34804,6 +34824,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerMapY = playerPosY / KBlockSize;//map[][y]
 				playerSpeed = KBlockSize;
 				goalTimer = 60;
+				isGameClearAudioFloag = false;
 
 				sceneNo = STAGE2;
 			}
