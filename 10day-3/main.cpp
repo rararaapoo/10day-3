@@ -14,6 +14,7 @@ enum SCENE {
 	GAMEOVER,//ゲームオーバー
 	GAMEOVER2,//STAGE2
 	GAMECLEAR4,
+	TITLE2,
 };
 
 int sceneNo = TITLE;
@@ -355,6 +356,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int pe = Novice::LoadTexture("./images/pe.png");
 	int po = Novice::LoadTexture("./images/po.png");
 
+	int gameManual = Novice::LoadTexture("./images/gameManual.png");
+
 	int block = Novice::LoadTexture("./images/block.png");
 	int goal = Novice::LoadTexture("./images/GOALS.png");
 	int player = Novice::LoadTexture("./images/player.png");
@@ -444,7 +447,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			//--------------------------------------------------------------------
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				sceneNo = STAGE1;
+				sceneNo = TITLE2;
 			}
 
 			break;
@@ -35016,6 +35019,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			}
 			break;
 
+		case TITLE2:
+			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				sceneNo = STAGE1;
+			}
+			break;
+
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
@@ -36169,7 +36179,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			break;
 
 		case GAMEOVER:
-			Novice::DrawSprite(0, 0, gameOver, 2, 2, 0, WHITE);
+			Novice::DrawSprite(0, 0, gameOver, 1, 1, 0, WHITE);
+			break;
+
+		case TITLE2:
+			Novice::DrawSprite(0, 0, gameManual, 1, 1, 0, WHITE);
 			break;
 
 		}
