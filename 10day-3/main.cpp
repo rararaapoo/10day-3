@@ -365,10 +365,16 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int MANUAL2 = Novice::LoadTexture("./images/mondai2.png");
 	int MANUAL3 = Novice::LoadTexture("./images/mondai3.png");
 	int MANUAL4 = Novice::LoadTexture("./images/manual.png");
+
 	int Explanation1 = Novice::LoadTexture("./images/Explanation1.png");
 	int Explanation2 = Novice::LoadTexture("./images/Explanation2.png");
 	int Explanation3 = Novice::LoadTexture("./images/Explanation3.png");
 
+	int hinto1 = Novice::LoadTexture("./images/hinto1.png");
+	int hinto2 = Novice::LoadTexture("./images/hinto2.png");
+	int hinto3 = Novice::LoadTexture("./images/hinto3.png");
+
+	//int lifeImage = Novice::LoadTexture("./images/life.png");
 
 	// Audio
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
@@ -379,8 +385,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	bool isClearFlag = false;
 	bool stageClearFlag = false;
+	
+	bool hintoFlag = false;
 
-	//int isLife = 3;
+	int isLife = 3;
+
 
 	// backGround BGM Play
 	Novice::PlayAudio(backGroundAudio, 1, 1);
@@ -411,6 +420,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			playerSpeed = KBlockSize;
 			isClearFlag = false;
 			stageClearFlag = false;
+			isLife = 3;
 			for (int y = 0; y < mapCountY; y++)
 			{
 				for (int x = 0; x < mapCountX; x++)
@@ -12216,8 +12226,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
 				Novice::PlayAudio(failureAudio, 0, 1);
+				isLife -= 1;
 
 			}
+
+			if (isLife <= 0)
+			{
+				Novice::PlayAudio(gameOverAudio, 0, 1);
+				sceneNo = GAMEOVER;
+			}
+
+			
 
 			if (stageClearFlag == true)
 			{
@@ -23011,8 +23030,16 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			if (map2[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
 				Novice::PlayAudio(failureAudio, 0, 1);
+				isLife -= 1;
 
 			}
+
+			if (isLife <= 0)
+			{
+				Novice::PlayAudio(gameOverAudio, 0, 1);
+				sceneNo = GAMEOVER;
+			}
+
 
 			if (stageClearFlag == true)
 			{
@@ -34812,8 +34839,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			if (map3[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
 				Novice::PlayAudio(failureAudio, 0, 1);
-
+				isLife -= 1;
 			}
+
+			if (isLife <= 0)
+			{
+				Novice::PlayAudio(gameOverAudio, 0, 1);
+				sceneNo = GAMEOVER;
+			}
+
 
 			if (stageClearFlag == true)
 			{
@@ -34841,6 +34875,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				goalTimer = 60;
 				stageClearFlag = false;
 				isClearFlag = false;
+				isLife = 3;
 
 				sceneNo = STAGE2;
 			}
@@ -34857,6 +34892,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				goalTimer = 60;
 				stageClearFlag = false;
 				isClearFlag = false;
+				isLife = 3;
 
 				sceneNo = STAGE3;
 			}
@@ -34881,7 +34917,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				Novice::PlayAudio(gameOverAudio, 0, 1);
 				sceneNo = TITLE;
 			}
 			break;
@@ -35253,6 +35288,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
+
+			Novice::DrawSprite(790, 664, player, 1, 1, 0, WHITE);
+			if (hintoFlag == true)
+			{
+				Novice::DrawSprite(864, 360, hinto1, 1, 1, 0, WHITE);
+			}
+		
 			break;
 
 		case STAGE2:
@@ -35598,6 +35640,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL2, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
+			if (hintoFlag == true)
+			{
+				Novice::DrawSprite(864, 360, hinto2, 1, 1, 0, WHITE);
+			}
+
 			break;
 
 		case STAGE3:
@@ -35941,6 +35988,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL3, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
+			if (hintoFlag == true)
+			{
+				Novice::DrawSprite(864, 360, hinto3, 1, 1, 0, WHITE);
+			}
+
 			break;
 
 		case GAMECLEAR:
