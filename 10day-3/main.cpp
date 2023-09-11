@@ -388,7 +388,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	
 	bool hintoFlag = false;
 
+	bool lifeImageFlag1 = true;
+	bool lifeImageFlag2 = true;
+	bool lifeImageFlag3 = true;
+
 	int isLife = 3;
+
+	
 
 
 	// backGround BGM Play
@@ -12230,6 +12236,27 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			}
 
+			if(isLife == 3)
+			{
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 2)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 1)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = false;
+				lifeImageFlag3 = true;
+			}
+
 			if (isLife <= 0)
 			{
 				Novice::PlayAudio(gameOverAudio, 0, 1);
@@ -23032,6 +23059,27 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				Novice::PlayAudio(failureAudio, 0, 1);
 				isLife -= 1;
 
+			}
+
+			if (isLife == 3)
+			{
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 2)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 1)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = false;
+				lifeImageFlag3 = true;
 			}
 
 			if (isLife <= 0)
@@ -34842,6 +34890,27 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				isLife -= 1;
 			}
 
+			if (isLife == 3)
+			{
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 2)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+			}
+
+			if (isLife == 1)
+			{
+				lifeImageFlag1 = false;
+				lifeImageFlag2 = false;
+				lifeImageFlag3 = true;
+			}
+
 			if (isLife <= 0)
 			{
 				Novice::PlayAudio(gameOverAudio, 0, 1);
@@ -34876,6 +34945,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				stageClearFlag = false;
 				isClearFlag = false;
 				isLife = 3;
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
 
 				sceneNo = STAGE2;
 			}
@@ -34893,6 +34965,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				stageClearFlag = false;
 				isClearFlag = false;
 				isLife = 3;
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
 
 				sceneNo = STAGE3;
 			}
@@ -35289,7 +35364,21 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
 
-			Novice::DrawSprite(790, 664, player, 1, 1, 0, WHITE);
+			if (lifeImageFlag1 == true)
+			{
+				Novice::DrawSprite(726, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag2 == true)
+			{
+				Novice::DrawSprite(758, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag3 == true)
+			{
+				Novice::DrawSprite(790, 32, player, 1, 1, 0, WHITE);
+			}
+			
 			if (hintoFlag == true)
 			{
 				Novice::DrawSprite(864, 360, hinto1, 1, 1, 0, WHITE);
@@ -35640,6 +35729,24 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL2, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
+
+			
+			if (lifeImageFlag1 == true)
+			{
+				Novice::DrawSprite(726, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag2 == true)
+			{
+				Novice::DrawSprite(758, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag3 == true)
+			{
+				Novice::DrawSprite(790, 32, player, 1, 1, 0, WHITE);
+			}
+			
+
 			if (hintoFlag == true)
 			{
 				Novice::DrawSprite(864, 360, hinto2, 1, 1, 0, WHITE);
@@ -35988,6 +36095,23 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL3, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
+
+
+			if (lifeImageFlag1 == true)
+			{
+				Novice::DrawSprite(726, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag2 == true)
+			{
+				Novice::DrawSprite(758, 32, player, 1, 1, 0, WHITE);
+			}
+
+			if (lifeImageFlag3 == true)
+			{
+				Novice::DrawSprite(790, 32, player, 1, 1, 0, WHITE);
+			}
+
 			if (hintoFlag == true)
 			{
 				Novice::DrawSprite(864, 360, hinto3, 1, 1, 0, WHITE);
