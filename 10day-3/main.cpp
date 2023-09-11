@@ -35230,7 +35230,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 					if (map[y][x] == YUKA)
 					{
-						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, BLUE, kFillModeSolid);
+						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, 0xb3dd96, kFillModeSolid);
 					}
 					if (map[y][x] == BLOCK)
 					{
@@ -35577,7 +35577,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 					if (map2[y][x] == YUKA)
 					{
-						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, BLUE, kFillModeSolid);
+						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, 0xb3dd96, kFillModeSolid);
 					}
 					if (map2[y][x] == BLOCK)
 					{
@@ -35921,7 +35921,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 					if (map3[y][x] == YUKA)
 					{
-						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, BLUE, kFillModeSolid);
+						Novice::DrawBox(x * KBlockSize, y * KBlockSize, KBlockSize, KBlockSize, 0, 0xb3dd96, kFillModeSolid);
 					}
 					if (map3[y][x] == BLOCK)
 					{
