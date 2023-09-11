@@ -364,25 +364,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// Audio
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
-	//int gameOverAudio = Novice::LoadAudio("./images/gameOver_SE.mp3");*/
+	int gameOverAudio = Novice::LoadAudio("./images/gameOver_SE.mp3");
 	int backGroundAudio = Novice::LoadAudio("./images/backGround_BGM.mp3");
 	/*int failureAudio = Novice::LoadAudio("./images/failureSE.mp3");
 	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");*/ 
 
 	bool isClearFlag = false;
-	//bool isGameOverAudioFlag = false;
-	/*bool isGameClearAudioFloag = true;*/
+
 	//int isLife = 3;
 
 	// backGround BGM Play
 	Novice::PlayAudio(backGroundAudio, 1, 1);
-
-	// isGameClearAudioFloagがtrueになれば再生する
-	//if (isGameClearAudioFloag == true)
-	//{
-	//	Novice::PlayAudio(gameClearAudio, 0, 1);
-	//	Novice::StopAudio(gameClearAudio);
-	//}
 
 
 	// ウィンドウの×ボタンが押されるまでループ
@@ -403,6 +395,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		{
 		case TITLE:
 			//初期化------------------------------------------------------------
+			
 			goalTimer = 60;
 			deathTimer = 60;
 			playerPosY = 672;
@@ -12221,15 +12214,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				}
 			}
 
-			/*	if (map[playerMapY][playerMapX] == THORN)
-				{
-					deathTimer--;
-					playerSpeed = 0;
-					if (deathTimer == 0)
-					{
-						sceneNo = GAMEOVER;
-					}
-				}*/
 			break;
 
 		case STAGE2:
@@ -22999,6 +22983,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			// ステージ遷移　解答のシーンを作る予定
 			if (map2[playerMapY][playerMapX] == GOAL /*&& isClearFlag == true*/ /*&& keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			{
+				Novice::PlayAudio(gameClearAudio, 0, 1);
 				sceneNo = GAMECLEAR2;
 			}
 
@@ -34792,6 +34777,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			// ステージ遷移　解答のシーンを作る予定
 			if (map3[playerMapY][playerMapX] == GOAL /* && isClearFlag == true *//* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
 			{
+				Novice::PlayAudio(gameClearAudio, 0, 1);
 				sceneNo = GAMECLEAR3;
 			}
 
@@ -34804,15 +34790,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					sceneNo = GAMECLEAR;
 				}
 			}
-
-			if (map[playerMapY][playerMapX] == THORN)
-			{
-				deathTimer--;
-				playerSpeed = 0;
-				if (deathTimer == 0)
-				{
-					sceneNo = GAMEOVER;
-				}
 			}*/
 
 			break;
@@ -34857,6 +34834,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
+				Novice::PlayAudio(gameOverAudio, 0, 1);
 				sceneNo = TITLE;
 			}
 			break;
