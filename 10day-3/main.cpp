@@ -367,21 +367,23 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	//int gameOverAudio = Novice::LoadAudio("./images/gameOver_SE.mp3");*/
 	int backGroundAudio = Novice::LoadAudio("./images/backGround_BGM.mp3");
 	/*int failureAudio = Novice::LoadAudio("./images/failureSE.mp3");
-	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");*/
+	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");*/ 
 
 	bool isClearFlag = false;
 	//bool isGameOverAudioFlag = false;
-	bool isGameClearAudioFloag = false;
+	/*bool isGameClearAudioFloag = true;*/
 	//int isLife = 3;
 
 	// backGround BGM Play
 	Novice::PlayAudio(backGroundAudio, 1, 1);
 
 	// isGameClearAudioFloagがtrueになれば再生する
-	if (isGameClearAudioFloag == true)
-	{
-		Novice::PlayAudio(gameClearAudio, 1, 1);
-	}
+	//if (isGameClearAudioFloag == true)
+	//{
+	//	Novice::PlayAudio(gameClearAudio, 0, 1);
+	//	Novice::StopAudio(gameClearAudio);
+	//}
+
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -12213,7 +12215,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				
 				if (goalTimer == 0)
 				{
-					
+					Novice::PlayAudio(gameClearAudio, 0, 1);
 					sceneNo = GAMECLEAR;
 
 				}
@@ -34824,7 +34826,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerMapY = playerPosY / KBlockSize;//map[][y]
 				playerSpeed = KBlockSize;
 				goalTimer = 60;
-				isGameClearAudioFloag = false;
+				//isGameClearAudioFloag = false;
 
 				sceneNo = STAGE2;
 			}
