@@ -366,10 +366,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
 	int gameOverAudio = Novice::LoadAudio("./images/gameOver_SE.mp3");
 	int backGroundAudio = Novice::LoadAudio("./images/backGround_BGM.mp3");
-	/*int failureAudio = Novice::LoadAudio("./images/failureSE.mp3");
-	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");*/ 
+	int failureAudio = Novice::LoadAudio("./images/failureSE.mp3");
+	int correctAudio = Novice::LoadAudio("./images/CorrectSE.mp3");
 
 	bool isClearFlag = false;
+	bool stageClearFlag = false;
 
 	//int isLife = 3;
 
@@ -400,6 +401,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			deathTimer = 60;
 			playerPosY = 672;
 			playerSpeed = KBlockSize;
+			isClearFlag = false;
+			stageClearFlag = false;
 			for (int y = 0; y < mapCountY; y++)
 			{
 				for (int x = 0; x < mapCountX; x++)
@@ -12194,25 +12197,33 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			//if (map[playerMapY][playerMapX] == GOAL /*&& isClearFlag == true*//* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
-			//{
-			//	
-			//	sceneNo = GAMECLEAR;
+			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				Novice::PlayAudio(correctAudio, 0, 1);
+				stageClearFlag = true;
+				
 	
-			//}
+			}
 
-			if (map[playerMapY][playerMapX] == GOAL)
+			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				Novice::PlayAudio(failureAudio, 0, 1);
+
+			}
+
+			if (stageClearFlag == true)
 			{
 				goalTimer--;
 				playerSpeed = 0;
-				
+
 				if (goalTimer == 0)
 				{
-					Novice::PlayAudio(gameClearAudio, 0, 1);
 					sceneNo = GAMECLEAR;
-
 				}
 			}
+
+			
+			
 
 			break;
 
@@ -22981,21 +22992,28 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			if (map2[playerMapY][playerMapX] == GOAL /*&& isClearFlag == true*/ /*&& keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
+			if (map2[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				Novice::PlayAudio(gameClearAudio, 0, 1);
-				sceneNo = GAMECLEAR2;
+				Novice::PlayAudio(correctAudio, 0, 1);
+				stageClearFlag = true;
 			}
 
-			//if (map2[playerMapY][playerMapX] == GOAL)
-			//{
-			//	goalTimer--;
-			//	playerSpeed = 0;
-			//	if (goalTimer == 0)
-			//	{
-			//		sceneNo = GAMECLEAR;
-			//	}
-			//}
+			if (map2[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				Novice::PlayAudio(failureAudio, 0, 1);
+
+			}
+
+			if (stageClearFlag == true)
+			{
+				goalTimer--;
+				playerSpeed = 0;
+
+				if (goalTimer == 0)
+				{
+					sceneNo = GAMECLEAR2;
+				}
+			}
 
 			break;
 
@@ -34775,22 +34793,29 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
-			if (map3[playerMapY][playerMapX] == GOAL /* && isClearFlag == true *//* && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0*/)
+			if (map3[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				Novice::PlayAudio(gameClearAudio, 0, 1);
-				sceneNo = GAMECLEAR3;
+				Novice::PlayAudio(correctAudio, 0, 1);
+				stageClearFlag = true;
 			}
 
-			/*if (map[playerMapY][playerMapX] == GOAL)
+			if (map3[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				Novice::PlayAudio(failureAudio, 0, 1);
+
+			}
+
+			if (stageClearFlag == true)
 			{
 				goalTimer--;
 				playerSpeed = 0;
 				if (goalTimer == 0)
 				{
-					sceneNo = GAMECLEAR;
+					Novice::PlayAudio(gameClearAudio, 0, 1);
+					sceneNo = GAMECLEAR3;
 				}
 			}
-			}*/
+			
 
 			break;
 
@@ -34803,7 +34828,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerMapY = playerPosY / KBlockSize;//map[][y]
 				playerSpeed = KBlockSize;
 				goalTimer = 60;
-				//isGameClearAudioFloag = false;
+				stageClearFlag = false;
+				isClearFlag = false;
 
 				sceneNo = STAGE2;
 			}
@@ -34818,6 +34844,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerMapY = playerPosY / KBlockSize;//map[][y]
 				playerSpeed = KBlockSize;
 				goalTimer = 60;
+				stageClearFlag = false;
+				isClearFlag = false;
 
 				sceneNo = STAGE3;
 			}
