@@ -13,6 +13,7 @@ enum SCENE {
 	GAMECLEAR3,//STAGE3
 	GAMEOVER,//ゲームオーバー
 	GAMEOVER2,//STAGE2
+	GAMECLEAR4,
 };
 
 int sceneNo = TITLE;
@@ -361,6 +362,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int gameOver = Novice::LoadTexture("./images/GAMEOVERR.png");
 	int title = Novice::LoadTexture("./images/TITLE.png");
 	int MANUAL = Novice::LoadTexture("./images/MANUALS.png");
+	int Explanation1 = Novice::LoadTexture("./images/Explanation1.png");
+	int Explanation2 = Novice::LoadTexture("./images/Explanation2.png");
+	int Explanation3 = Novice::LoadTexture("./images/Explanation3.png");
 
 	// Audio
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
@@ -12221,6 +12225,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					sceneNo = GAMECLEAR;
 				}
 			}
+
+
 
 			
 			
@@ -34811,13 +34817,14 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerSpeed = 0;
 				if (goalTimer == 0)
 				{
-					Novice::PlayAudio(gameClearAudio, 0, 1);
 					sceneNo = GAMECLEAR3;
 				}
 			}
 			
 
 			break;
+
+			
 
 		case GAMECLEAR:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
@@ -34854,10 +34861,18 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMECLEAR3:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				sceneNo = TITLE;
+				sceneNo = GAMECLEAR4;
+				Novice::PlayAudio(gameClearAudio, 0, 1);
 			}
 			break;
 
+		case GAMECLEAR4:
+			
+			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
+			{
+				sceneNo = TITLE;
+			}
+			break;
 
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
@@ -35229,6 +35244,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				}
 			}
+			
+
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
 			break;
@@ -35920,19 +35937,25 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			break;
 
 		case GAMECLEAR:
-			Novice::DrawSprite(0, 0, gameClear, 2, 2, 0, WHITE);
+			Novice::DrawBox(0, 0, 1280, 720, 0, BLACK, kFillModeSolid);
+			Novice::DrawSprite(150, 90, Explanation1, 1, 1, 0, WHITE);
 			break;
 
 		case GAMECLEAR2:
-			Novice::DrawSprite(0, 0, gameClear, 2, 2, 0, WHITE);
+			Novice::DrawBox(0, 0, 1280, 720, 0, BLACK, kFillModeSolid);
+			Novice::DrawSprite(150, 90, Explanation2, 1, 1, 0, WHITE);
 			break;
 
 		case GAMECLEAR3:
-			Novice::DrawSprite(0, 0, gameClear, 2, 2, 0, WHITE);
+			Novice::DrawBox(0, 0, 1280, 720, 0, BLACK, kFillModeSolid);
+			Novice::DrawSprite(150, 90, Explanation3, 1, 1, 0, WHITE);
 			break;
 
+		case GAMECLEAR4:
+			Novice::DrawSprite(0, 0, gameClear, 1, 1, 0, WHITE);
+			break;
 		case GAMEOVER2:
-			Novice::DrawSprite(0, 0, gameOver, 2, 2, 0, WHITE);
+			Novice::DrawSprite(0, 0, gameOver, 1, 1, 0, WHITE);
 			break;
 
 		case GAMEOVER:
