@@ -468,6 +468,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerPosX = 13 * KBlockSize;//プレイヤーの位置
 				playerPosY = 672;
 				playerSpeed = KBlockSize;
+
+				isClearFlag = false;
+				stageClearFlag = false;
+				isLife = 3;
+
+				hintoFlag = false;
+
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+
 				for (int y = 0; y < mapCountY; y++)
 				{
 					for (int x = 0; x < mapCountX; x++)
@@ -12316,6 +12327,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerPosX = 1 * KBlockSize;//プレイヤーの位置
 				playerPosY = 20 * KBlockSize;
 				playerSpeed = KBlockSize;
+
+				isClearFlag = false;
+				stageClearFlag = false;
+				isLife = 3;
+
+				hintoFlag = false;
+
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+
 				for (int y = 0; y < mapCountY2; y++)
 				{
 					for (int x = 0; x < mapCountX2; x++)
@@ -23140,6 +23162,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerPosX = 12 * KBlockSize;//プレイヤーの位置
 				playerPosY = 18 * KBlockSize;
 				playerSpeed = KBlockSize;
+
+				isClearFlag = false;
+				stageClearFlag = false;
+				isLife = 3;
+
+				hintoFlag = false;
+
+				lifeImageFlag1 = true;
+				lifeImageFlag2 = true;
+				lifeImageFlag3 = true;
+
 				for (int y = 0; y < mapCountY3; y++)
 				{
 					for (int x = 0; x < mapCountX3; x++)
