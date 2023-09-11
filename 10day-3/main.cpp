@@ -362,9 +362,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int gameOver = Novice::LoadTexture("./images/GAMEOVERR.png");
 	int title = Novice::LoadTexture("./images/TITLE.png");
 	int MANUAL = Novice::LoadTexture("./images/MANUALS.png");
+	int MANUAL2 = Novice::LoadTexture("./images/mondai2.png");
+	int MANUAL3 = Novice::LoadTexture("./images/mondai3.png");
+	int MANUAL4 = Novice::LoadTexture("./images/manual.png");
 	int Explanation1 = Novice::LoadTexture("./images/Explanation1.png");
 	int Explanation2 = Novice::LoadTexture("./images/Explanation2.png");
 	int Explanation3 = Novice::LoadTexture("./images/Explanation3.png");
+
 
 	// Audio
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
@@ -35248,6 +35252,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
 			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
+			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
 			break;
 
 		case STAGE2:
@@ -35591,7 +35596,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				}
 			}
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
-			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
+			Novice::DrawSprite(864, 0, MANUAL2, 1, 1, 0, WHITE);
+			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
 			break;
 
 		case STAGE3:
@@ -35933,7 +35939,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				}
 			}
 			Novice::DrawSprite(playerPosX, playerPosY, player, 1, 1, 0, WHITE);
-			Novice::DrawSprite(864, 0, MANUAL, 1, 1, 0, WHITE);
+			Novice::DrawSprite(864, 0, MANUAL3, 1, 1, 0, WHITE);
+			Novice::DrawSprite(864, 360, MANUAL4, 1, 1, 0, WHITE);
 			break;
 
 		case GAMECLEAR:
