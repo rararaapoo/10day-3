@@ -377,7 +377,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	int hinto2 = Novice::LoadTexture("./images/hinto2.png");
 	int hinto3 = Novice::LoadTexture("./images/hinto3.png");
 
-	//int lifeImage = Novice::LoadTexture("./images/life.png");
+	int lifeImage = Novice::LoadTexture("./images/life.png");
 
 	// Audio
 	int gameClearAudio = Novice::LoadAudio("./images/gameClear_SE.mp3");
@@ -35485,6 +35485,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			{
 				Novice::DrawSprite(864, 360, hinto1, 1, 1, 0, WHITE);
 			}
+
+			Novice::DrawSprite(650, 32, lifeImage, 1, 1, 0, WHITE);
 		
 			break;
 
@@ -35853,7 +35855,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			{
 				Novice::DrawSprite(864, 360, hinto2, 1, 1, 0, WHITE);
 			}
-
+			Novice::DrawSprite(650, 32, lifeImage, 1, 1, 0, WHITE);
 			break;
 
 		case STAGE3:
@@ -36218,6 +36220,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			{
 				Novice::DrawSprite(864, 360, hinto3, 1, 1, 0, WHITE);
 			}
+			Novice::DrawSprite(650, 32, lifeImage, 1, 1, 0, WHITE);
 
 			break;
 
