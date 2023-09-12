@@ -35028,7 +35028,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMECLEAR:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-				playerPosX = 1 * KBlockSize;//プレイヤーの位置
+				playerPosX = 12 * KBlockSize;//プレイヤーの位置
 				playerPosY = 20 * KBlockSize;
 				playerMapX = playerPosX / KBlockSize;//map[x][]
 				playerMapY = playerPosY / KBlockSize;//map[][y]
