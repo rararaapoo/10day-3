@@ -444,6 +444,20 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 					map[y][x] = mapFormat[y][x];
 				}
 			}
+			for (int y = 0; y < mapCountY2; y++)
+			{
+				for (int x = 0; x < mapCountX2; x++)
+				{
+					map2[y][x] = mapFormat2[y][x];
+				}
+			}
+			for (int y = 0; y < mapCountY3; y++)
+			{
+				for (int x = 0; x < mapCountX3; x++)
+				{
+					map3[y][x] = mapFormat3[y][x];
+				}
+			}
 			//--------------------------------------------------------------------
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
