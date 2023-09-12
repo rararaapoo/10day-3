@@ -35079,6 +35079,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
+
 				sceneNo = TITLE;
 			}
 			break;
