@@ -514,10 +514,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == BLOCK1)
+				/*if (map[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosY -= playerSpeed;
-				}
+				}*/
 				if (map[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosY -= playerSpeed;
@@ -3482,10 +3482,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					playerPosX -= playerSpeed;
 				}
-				if (map[playerMapY][playerMapX] == BLOCK1)
+				/*if (map[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosX -= playerSpeed;
-				}
+				}*/
 				if (map[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosX -= playerSpeed;
@@ -12379,10 +12379,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map2[playerMapY][playerMapX] == BLOCK1)
+				/*if (map2[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosY -= playerSpeed;
-				}
+				}*/
 				if (map2[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosY -= playerSpeed;
@@ -23218,10 +23218,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					playerPosY -= playerSpeed;
 				}
-				if (map3[playerMapY][playerMapX] == BLOCK1)
+				/*if (map3[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosY -= playerSpeed;
-				}
+				}*/
 				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosY -= playerSpeed;
@@ -26186,10 +26186,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				{
 					playerPosX -= playerSpeed;
 				}
-				if (map3[playerMapY][playerMapX] == BLOCK1)
+				/*if (map3[playerMapY][playerMapX] == BLOCK1)
 				{
 					playerPosX -= playerSpeed;
-				}
+				}*/
 				if (map3[playerMapY][playerMapX] == GOAL)
 				{
 					playerPosX -= playerSpeed;
