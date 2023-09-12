@@ -396,13 +396,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	bool lifeImageFlag3 = true;
 
 	int isLife = 3;
-
+	// backGround BGM Play
+	int backAudio = Novice::PlayAudio(backGroundAudio, 1, 1);
 	
 
 
-	// backGround BGM Play
-	Novice::PlayAudio(backGroundAudio, 1, 1);
-
+	
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -423,6 +422,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case TITLE:
 			//初期化------------------------------------------------------------
 			
+			Novice::ResumeAudio(backAudio);
 			goalTimer = 60;
 			deathTimer = 60;
 			playerPosY = 672;
@@ -436,6 +436,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			lifeImageFlag1 = true;
 			lifeImageFlag2 = true;
 			lifeImageFlag3 = true;
+
+		
 
 			for (int y = 0; y < mapCountY; y++)
 			{
@@ -485,13 +487,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				isClearFlag = false;
 				stageClearFlag = false;
-				isLife = 3;
+
 
 				hintoFlag = false;
-
-				lifeImageFlag1 = true;
-				lifeImageFlag2 = true;
-				lifeImageFlag3 = true;
 
 				for (int y = 0; y < mapCountY; y++)
 				{
@@ -12267,8 +12265,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			{
 				Novice::PlayAudio(correctAudio, 0, 1);
 				stageClearFlag = true;
-				
-	
 			}
 
 			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == false && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
@@ -12307,6 +12303,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			if (isLife <= 0)
 			{
+				Novice::PauseAudio(backAudio);
 				Novice::PlayAudio(gameOverAudio, 0, 1);
 				sceneNo = GAMEOVER;
 			}
@@ -12320,6 +12317,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				if (goalTimer == 0)
 				{
+					Novice::PauseAudio(backAudio);
 					sceneNo = GAMECLEAR;
 				}
 			}
@@ -12339,25 +12337,21 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			blockMapX = blockPosX / KBlockSize;
 			blockMapY = blockPosY / KBlockSize;
 
-
 			//リスタート
 			if (keys[DIK_R] && preKeys[DIK_R] == 0)
 			{
 				goalTimer = 60;//初期化
 				deathTimer = 60;
-				playerPosX = 1 * KBlockSize;//プレイヤーの位置
+				playerPosX = 12 * KBlockSize;//プレイヤーの位置
 				playerPosY = 20 * KBlockSize;
 				playerSpeed = KBlockSize;
 
 				isClearFlag = false;
 				stageClearFlag = false;
-				isLife = 3;
 
 				hintoFlag = false;
 
-				lifeImageFlag1 = true;
-				lifeImageFlag2 = true;
-				lifeImageFlag3 = true;
+			
 
 				for (int y = 0; y < mapCountY2; y++)
 				{
@@ -23154,6 +23148,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			if (isLife <= 0)
 			{
+				Novice::PauseAudio(backAudio);
 				Novice::PlayAudio(gameOverAudio, 0, 1);
 				sceneNo = GAMEOVER;
 			}
@@ -23166,6 +23161,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				if (goalTimer == 0)
 				{
+					Novice::PauseAudio(backAudio);
 					sceneNo = GAMECLEAR2;
 				}
 			}
@@ -23191,13 +23187,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 				isClearFlag = false;
 				stageClearFlag = false;
-				isLife = 3;
 
 				hintoFlag = false;
 
-				lifeImageFlag1 = true;
-				lifeImageFlag2 = true;
-				lifeImageFlag3 = true;
 
 				for (int y = 0; y < mapCountY3; y++)
 				{
@@ -35005,6 +34997,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			if (isLife <= 0)
 			{
+				Novice::PauseAudio(backAudio);
 				Novice::PlayAudio(gameOverAudio, 0, 1);
 				sceneNo = GAMEOVER;
 			}
@@ -35016,6 +35009,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				playerSpeed = 0;
 				if (goalTimer == 0)
 				{
+					Novice::PauseAudio(backAudio);
 					sceneNo = GAMECLEAR3;
 				}
 			}
@@ -35028,6 +35022,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMECLEAR:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
+				Novice::ResumeAudio(backAudio);
 				playerPosX = 12 * KBlockSize;//プレイヤーの位置
 				playerPosY = 20 * KBlockSize;
 				playerMapX = playerPosX / KBlockSize;//map[x][]
@@ -35049,6 +35044,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMECLEAR2:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
+				Novice::ResumeAudio(backAudio);
 				playerPosX = 12 * KBlockSize;//プレイヤーの位置
 				playerPosY = 18 * KBlockSize;
 				playerMapX = playerPosX / KBlockSize;//map[x][]
@@ -35070,6 +35066,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMECLEAR3:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
+				Novice::PauseAudio(backAudio);
 				sceneNo = GAMECLEAR4;
 				Novice::PlayAudio(gameClearAudio, 0, 1);
 			}
@@ -35093,7 +35090,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		case GAMEOVER:
 			if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
-
+				Novice::ResumeAudio(backAudio);
 				sceneNo = TITLE;
 			}
 			break;
