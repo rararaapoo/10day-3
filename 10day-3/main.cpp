@@ -12241,6 +12241,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 			}
 
+			if (map[4][9] != I || map[4][11] != NU)
+			{
+				isClearFlag = false;
+
+			}
+
+
 			// ステージ遷移　解答のシーンを作る予定
 			if (map[playerMapY][playerMapX] == GOAL && isClearFlag == true && keys[DIK_SPACE] && preKeys[DIK_SPACE] == 0)
 			{
@@ -23083,6 +23090,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			if (map2[4][7] == SA && map2[4][9] == GI && map2[4][11] == YO && map2[4][13] == U)
 			{
 				isClearFlag = true;
+			}
+
+			if (map2[4][7] != SA || map2[4][9] != GI || map2[4][11] != YO || map2[4][13] != U)
+			{
+				isClearFlag = false;
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
@@ -34930,6 +34942,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			if (map3[4][9] == TSU)
 			{
 				isClearFlag = true;
+			}
+
+			if (map3[4][9] != TSU)
+			{
+				isClearFlag = false;
 			}
 
 			// ステージ遷移　解答のシーンを作る予定
